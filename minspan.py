@@ -166,7 +166,7 @@ def nnz(S):
     if hasattr(S, "nnz"):
         return S.nnz
     if isinstance(S, matrix):
-        return S.nonzero()[0].shape[1]
+        return S.nonzero()[0].shape[0]
     total = S != 0
     for i in range(len(S.shape)):
         total = sum(total)
